@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>IIT Kharagpur- Internship (Summer) - 2023</h1>
+
+    <h3>Please fill the form:</h3>
+
+    <form action="/all.php" method="post">
+        <label for="name">Enter Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="age">Enter age:</label>
+        <input type="number" name="age" required>
+
+        <label for="gender">select gender:</label>
+        <select name="gender" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">other</option>
+        </select>
+        <input type="submit" value="submit">
+    </form>
+
+    <p id="message"><?php echo isset($message) ? $message : ''; ?></p>
+    
+
+    
+</body>
+</html>

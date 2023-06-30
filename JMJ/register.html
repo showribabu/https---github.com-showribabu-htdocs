@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <style>
+        
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .wrapper {
+                margin: 0 auto;
+                width: 1000px;
+            }
+            #img-logo {
+                position: absolute;
+                width: 100px;
+                align-items: center;
+                justify-content: center;
+                left: 45%;
+            }
+            .register {
+                position: absolute;
+                align-items: center;
+                left: 44%;
+                top:20%;
+                color: rgb(78, 14, 78);
+            }
+            .fname {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 18%;
+                top:29%;
+            }
+            .fnm {
+                position: absolute;
+                align-items: center;
+                left:28%;
+                top: 29%;
+                width: 220px;
+                height: 25px;
+            }
+            .lname {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 53%;
+                top:29%;
+            }
+            .lnm {
+                position: absolute;
+                align-items: center;
+                left:63%;
+                top: 29%;
+                width: 220px;
+                height: 25px;
+            }
+            .userid {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 20.3%;
+                top:36%;
+            }
+            .uid {
+                position: absolute;
+                align-items: center;
+                left:28%;
+                top: 36%;
+                width: 220px;
+                height: 25px;
+            }
+            .email {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 56.3%;
+                top:36%;
+            }
+            .eml {
+                position: absolute;
+                align-items: center;
+                left:63%;
+                top: 36%;
+                width: 220px;
+                height: 25px;
+            }
+            .owqn {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 12.2%;
+                top:43%;
+            }
+            .owq {
+                position: absolute;
+                align-items: center;
+                left:28%;
+                top: 43%;
+                width: 220px;
+                height: 25px;
+            }
+            .answer {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 55.2%;
+                top:43%;
+            }
+            .ans {
+                position: absolute;
+                align-items: center;
+                left:63%;
+                top: 43%;
+                width: 220px;
+                height: 25px;
+            }
+            .passwd {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 19%;
+                top:50%;
+            }
+            .pswd {
+                position: absolute;
+                align-items: center;
+                left:28%;
+                top: 50%;
+                width: 220px;
+                height: 25px;
+            }
+            .cpasswd {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 48%;
+                top:50%;
+            }
+            .cpswd {
+                position: absolute;
+                align-items: center;
+                left:63%;
+                top: 50%;
+                width: 220px;
+                height: 25px;
+            }
+            .contact {
+                position: absolute;
+                align-items: center;
+                font-size:20px;
+                font-weight: bold;
+                left: 20%;
+                top:57%;
+            }
+            .cont {
+                position: absolute;
+                align-items: center;
+                left:28%;
+                top: 57%;
+                width: 220px;
+                height: 25px;
+            }
+            .spd {
+                position: absolute;
+                align-items: center;
+                top: 58%;
+                left: 64%; 
+            }
+            .cbox {
+                position: absolute;
+                align-items: center;
+                top: 58.5%;
+                left: 62%;
+            }
+            .reg {
+                position: absolute;
+                align-items: center;
+                top:67%;
+                left:45%;
+                color: white;
+                padding: 10px;
+                font-size:18px;
+                font-weight: bold;
+                background-color: rgb(78, 14, 78);
+            }
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        
+    </style>
+    <script>
+        // Function to validate the form
+        function validateForm() {
+            var fname = document.forms["registrationForm"]["fname"].value;
+            var lname = document.forms["registrationForm"]["lname"].value;
+            var userid = document.forms["registrationForm"]["userid"].value;
+            var email = document.forms["registrationForm"]["email"].value;
+            var passwd = document.forms["registrationForm"]["passwd"].value;
+            var cpasswd = document.forms["registrationForm"]["cpasswd"].value;
+            var id_register = document.getElementById("id_register");
+
+
+            // Validate required fields
+            if (fname === "" || lname === "" || userid === "" || passwd === "" || cpasswd === "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            // Validate password match
+            if (passwd !== cpasswd) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Validate email format
+            var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true;
+        }  
+    </script>
+</head>
+<body>
+    <div class="flex-container">
+        
+            <img id="img-logo" src="" alt="DRDO logo">
+            <h2 class="register">Welcome to registration</h2>
+
+            <form name="registrationForm" onsubmit="return validateForm()" action="/reg.php">
+                <label class="fname">First Name :</label>
+                <input class="fnm" type="text" name="fname" required>
+
+                <label class="lname">Last Name :</label>
+                <input class="lnm" type="text" name="lname" required>
+
+                <label class="userid">User ID :</label>
+                <input class="uid" type="text" name="userid" required>
+
+                <label class="email">Email :</label>
+                <input class="eml" type="text" name="email">
+
+                <label class="owqn">One Word Question :</label>
+                <!-- <input class="owq" type="text" name="owqn"> -->
+                <select name="owqn" id="owq">
+                    <option value="whas is your petname?">whas is your petname?</option>
+                    <option value="what is your favourite food">what is your favourite food</option>
+                    <!-- similarly all possible -->
+                </select>
+
+                <label class="answer">Answer :</label>
+                <input class="ans" type="text" name="answer">
+
+                <label class="passwd">Password :</label>
+                <input class="pswd" type="password" name="password" required>
+
+                <label class="cpasswd">Confirm Password :</label>
+                <input class="cpswd" type="password" name="cpassword" required>
+
+                <label class="contact">Contact :</label>
+                <input class="cont" type="text" name="contact">
+
+                <input class="cbox" type="checkbox" name="cb">
+                <h4 class="spd">Show Password</h4>
+
+                <!-- <button class="reg"  type="submit">REGISTER </button> -->
+                <input type="submit" value="submit">
+            </form>
+      
+    </div>
+</body>
+</html>

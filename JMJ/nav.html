@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+    <style>
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .navbar {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            align-items: center;
+            margin-left:180px;
+        }
+        
+        .navbar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .navbar-menu li {
+            display: inline-block;
+            margin-left:13px;
+            
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h4{
+            font-family: Arial, Helvetica, sans-serif;
+            
+            text-shadow:1px 1px .1px black;
+
+        }
+        @media (max-width: 576px) {
+            .navbar-menu {
+                text-align: center;
+                margin-top: 10px;
+            }
+            
+            .navbar-menu li {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="navbar-brand">
+                    <p style="text-shadow:1px 1px .1px black;">DRDO (DEFENCE RESEARCH AND DEVELOPMENT ORGANISATION )</p>
+                    <h4 style="display: inline; font-size:16px;"> - Where there is no scope to compromise security.</h4>
+
+                </div>
+                <ul class="navbar-menu">
+                    <li><a href="login.html" class="btn btn-primary">Login</a></li>
+                    <li><a href="register.html" class="btn btn-secondary">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

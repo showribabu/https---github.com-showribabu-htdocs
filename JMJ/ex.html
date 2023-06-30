@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to DRDO</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width:100%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .navbar {
+        background-color: #f8f9fa;
+        padding: 10px 0;
+        width:100%;
+
+      }
+      
+      .navbar-brand {
+        font-weight: bold;
+        font-size: 24px;
+      }
+      
+      .navbar-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .navbar-menu li {
+        display: inline-block;
+        margin-left: 80px;
+        margin-top:30px;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+      
+      
+      .btn-secondary {
+        background-color: #6c757d;
+      }
+      
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .welcome-container {
+        max-width: 800px;
+        margin: 40px auto;
+        text-align: center;
+      }
+      
+      h1 {
+        margin-bottom: 10px;
+        font-size: 32px;
+        color: #007bff;
+      }
+      
+      p {
+        font-size: 18px;
+      }
+      
+      .media-container {
+        margin-bottom: 10px;
+      }
+      
+      
+      img {
+        
+        border-radius: 4px;
+        min-width:70%;
+        min-height:70%;
+        
+      }
+      video{
+        min-width:90%;
+      }
+    
+      .video-con{
+
+        margin-top:30px;
+        min-width:100%;
+
+        background-color:azure;
+        box-shadow:1px 2px 6px black;
+        border-radius:20px;
+
+      }
+      
+      .vtext_onvideo {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        text-align:center;
+        top:85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        border-radius: 14px;
+        font-size: 16px;
+        width:51%;
+      }
+      
+      .thought-question {
+        font-style: italic;
+        margin-top: 10px;
+        font-size: 20px;
+        color: #6c757d;
+      }
+
+    </style>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">WELCOME TO SECURE WORLD</div>
+        <ul class="navbar-menu">
+          <li><a href="two.html" class="btn btn-primary">Login</a></li>
+          <li><a href="ine.html" class="btn btn-secondary">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="welcome-container">
+    <h1>Welcome to DRDO</h1>
+    <b><p>Where there is no scope to compromise security.</p></b>
+    <div class="video-con" id="video-con">
+      <video src="video.mp4" autoplay muted loop></video>
+    </div>
+    <div class="media-container">
+      <div class="vtext_onvideo">
+        <p>DRDO</p>
+        <h3>Securing the Future</h3>
+      </div>
+    </div>
+
+    <img src="logo2.png" alt="DRDO Image">
+
+    <p class="thought-question">Where all your details are kept safe and secure.</p>
+  </div>
+</body>
+</html>

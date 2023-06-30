@@ -1,0 +1,9 @@
+{
+    "name": "iit/mas",
+    "require": {
+      "mongodb/mongodb": "^1.12",
+        "firebase/php-jwt": "^6.8"
+    }
+  }
+
+  
